@@ -92,17 +92,17 @@ You can customise the behaviour of the Website Availability Checker script based
 
     ```
 
-- **Notifications**: The script utilizes `plyer` to send desktop notifications. You can customize the notification behaviour by modifying the notification code in the script. For example, you can change the notification message.
+- **Notifications**: The script utilises `plyer` to send desktop notifications. You can customise the notification behaviour by modifying the notification code in the script. For example, you can change the notification message.
 
 - **Error Handling**: The script handles common exceptions and provides basic error handling. You can enhance the error handling logic to address specific scenarios or error types that you encounter.
 
-Please note that the Website Availability Checker is a basic implementation and may not handle all scenarios or account for complex network configurations. It is recommended to enhance and customize the script based on your specific requirements.
+Please note that the Website Availability Checker is a basic implementation and may not handle all scenarios or account for complex network configurations. It is recommended to enhance and customise the script based on your specific requirements.
 
 ---
 
 ## Contribution Guidelines
 
-We encourage you to contribute your own automation projects to this repository! Whether it's a small script or a complex application, your creations can inspire and empower others to embrace automation. To contribute, please follow these guidelines:
+I encourage you to contribute your own automation projects to this repository! Whether it's a small script or a complex application, your creations can inspire and empower others to embrace automation. To contribute, please follow these guidelines:
 
 - Fork this repository and create a new branch for your project.
 - Add your project to the appropriate category or create a new one if needed.
@@ -119,6 +119,3 @@ Happy coding! 🚀✨
 Note: This README file serves as a general record for Python automation projects. As the repository grows, you'll find an array of exciting projects covering various aspects of automation. Stay tuned for updates and feel free to explore the existing projects or contribute your own.
 
 For any questions or suggestions, please reach out to me. We're here to support and inspire each other in our automation journeys.
-
----
-

@@ -44,7 +44,7 @@ class WebsiteAvailability(tk.Tk):
 
                 load_time = end_time - start_time
 
-                result_text = (f"{website_url} returned a status of {response.status_code} and had a load time of {round(load_time, 3)} seconds", True) # Return True if requests is success with no errors else return False
+                result_text = (f"{website_url} returned a status of {response.status_code} and had a load time of {round(load_time, 3)} seconds", True) # Return True if request is success with no errors else return False
 
             except requests.exceptions.MissingSchema:
                 result_text = ("Invalid URL: Add 'https://' before the URL", False)
@@ -62,16 +62,17 @@ class WebsiteAvailability(tk.Tk):
         self.lbl_result.configure(text=result_text[0], foreground="green" if result_text[1] and response.status_code == 200 else "red") # Even if the request went through, mark text as red if status code is not OK
         self.lbl_result.pack(pady=4, padx=10)
 
-        # Create desktop notification
-        notification.notify(
-            title="Website Check",
-            message=result_text[0],
-            app_name="Website Availability"
-        )
+        if result_text[1]:
+            # Create desktop notification
+            notification.notify(
+                title="Website Check",
+                message=result_text[0],
+                app_name="Website Availability"
+            )
 
-        # Schedule the check to run in 5 minutes
-        if self.chb_variable_state.get() and result_text[1]:
-            self.after(300000, self.check_website_availability)
+            # Schedule the check to run in 5 minutes
+            if self.chb_variable_state.get():
+                self.after(300000, self.check_website_availability)
 
 
 # Instantiate the class
