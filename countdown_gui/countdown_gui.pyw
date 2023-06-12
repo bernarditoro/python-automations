@@ -3,11 +3,11 @@ import tkinter as tk
 from datetime import datetime
 
         
-class Reminder(tk.Tk):
+class Countdown(tk.Tk):
     def __init__(self):
         super().__init__()
 
-        self.title("Reminder")
+        self.title("Countdown")
 
         self.fr_main = tk.Frame()
         self.fr_main.pack(pady=5)
@@ -58,5 +58,5 @@ class Reminder(tk.Tk):
         
 
 # Instantiate the class
-reminder = Reminder()
-reminder.mainloop()
+countdown = Countdown()
+countdown.mainloop()

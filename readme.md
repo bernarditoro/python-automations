@@ -4,6 +4,13 @@ Welcome to the Python Automation Projects repository! 🐍✨
 
 Here, you will find a collection of diverse Python automation projects that aim to simplify your life and boost your productivity. Each project showcases the power of automation using Python, demonstrating how we can delegate repetitive tasks to our trusty machines and save valuable time.
 
+## Table of Contents
+
+- [Countdown GUI](#countdown-gui)
+- [Website Availbility Checker](#website-availability-checker)
+- [Contributing](#contribution-guidelines)
+
+
 ## Countdown GUI
 
 ![Countdown GUI](countdown_gui/screenshots/countdown_gui_screenshot.png)
@@ -25,7 +32,7 @@ The **Countdown GUI** is an exciting project that provides a glimpse into the wo
     - Add the script to the folder that comes up. Now every time your PC starts up, the script will run to display the countdown GUI.
     ![Startup Folder](countdown_gui/screenshots/startup_folder.png)
 
-## Getting Started
+### Getting Started
 
 To explore the **Countdown GUI** project, follow these steps:
 
@@ -33,6 +40,63 @@ To explore the **Countdown GUI** project, follow these steps:
 2. Navigate to the `countdown_gui` folder.
 3. Run the Python script `countdown_gui.pyw` to launch the application.
 4. Enjoy the countdown experience and experiment with customisations!
+
+**Disclaimer:** The countdown GUI project is for demonstration purposes only and should not be considered a full-fledged application for critical events or time-sensitive tasks. It is advisable to perform adequate testing and customisation for your specific needs before relying on it for important deadlines or events.
+
+---
+
+## Website Availability Checker
+
+This project is a simple Python script that allows you to check the availability of a website. It sends HTTP requests to the specified URL and determines if the websites are online or experiencing any issues. Additionally, it provides load time information and sends notifications using `plyer`.
+
+### Dependencies
+
+To run the Website Availability Checker, you need to have the following dependencies installed:
+
+- Python 3.x
+- requests library
+- plyer library
+
+You can install the required dependencies using `pip`. Run the following command:
+
+```python
+pip install requests plyer
+```
+
+### Usage
+
+1. Clone the repository or download the source code to your local machine.
+
+2. Navigate to the project directory in your command line or terminal.
+
+3. In your command line or terminal, run the following command:
+
+   ```bash
+   python website_availability_checker.py
+   ```
+
+   The script will start checking the availability of the specified websites every 5 minutes and display the results, including the load time of each website.
+
+4. The script will also send desktop notifications using `plyer` to notify you about the website status. Ensure that you have the necessary permissions set to receive notifications.
+
+### Customisation
+
+You can customise the behaviour of the Website Availability Checker script based on your requirements. Here are some options:
+
+- **Interval**: By default, the script checks the websites every 5 minutes. You can modify this value by locating and modifying this part of the code (time is in milliseconds):
+
+    ```python
+    # Schedule the check to run in 5 minutes
+    if self.chb_variable_state.get() and result_text[1]:
+        self.after(300000, self.check_website_availability)
+
+    ```
+
+- **Notifications**: The script utilizes `plyer` to send desktop notifications. You can customize the notification behaviour by modifying the notification code in the script. For example, you can change the notification message.
+
+- **Error Handling**: The script handles common exceptions and provides basic error handling. You can enhance the error handling logic to address specific scenarios or error types that you encounter.
+
+Please note that the Website Availability Checker is a basic implementation and may not handle all scenarios or account for complex network configurations. It is recommended to enhance and customize the script based on your specific requirements.
 
 ---
 
@@ -58,4 +122,3 @@ For any questions or suggestions, please reach out to me. We're here to support 
 
 ---
 
-**Disclaimer:** The countdown GUI project is for demonstration purposes only and should not be considered a full-fledged application for critical events or time-sensitive tasks. It is advisable to perform adequate testing and customisation for your specific needs before relying on it for important deadlines or events.
