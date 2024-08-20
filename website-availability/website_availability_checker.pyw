@@ -50,7 +50,7 @@ class WebsiteAvailability(tk.Tk):
                 result_text = ("Invalid URL: Add 'https://' before the URL", False)
 
             except requests.exceptions.ConnectionError:
-                # Retry the request in 10 seconds
+                # TODO: Retry the request in 10 seconds
                 result_text = ("Connection refused!", False)
 
             except requests.exceptions.InvalidURL:
@@ -63,18 +63,15 @@ class WebsiteAvailability(tk.Tk):
         self.lbl_result.pack(pady=4, padx=10)
 
         if result_text[1]:
-            # Create desktop notification
             notification.notify(
                 title="Website Check",
                 message=result_text[0],
                 app_name="Website Availability"
             )
 
-            # Schedule the check to run in 5 minutes
             if self.chb_variable_state.get():
                 self.after(300000, self.check_website_availability)
 
 
-# Instantiate the class
 check_availability = WebsiteAvailability()
 check_availability.mainloop()

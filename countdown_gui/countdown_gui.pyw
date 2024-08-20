@@ -20,10 +20,9 @@ class Countdown(tk.Tk):
         self.lbl_main_label = tk.Label(master=self.fr_main, text=f"You have {time_to_leave} until you have to leave!")
         self.lbl_main_label.pack(pady=10, padx=10)
 
-        self.btn_close = tk.Button(master=self.btn_frame, text="Close", bg="#1f1f1f", fg="#ebebeb", padx=10, command=self.destroy)
+        self.btn_close = tk.Button(master=self.btn_frame, text="Close", bg="#ebebeb", fg="#1f1f1f", padx=10, command=self.destroy)
         self.btn_close.pack()
 
-        # Update the label every second
         self.lbl_main_label.after(1000, self.update_main_label)
 
     def update_main_label(self):
@@ -33,12 +32,11 @@ class Countdown(tk.Tk):
 
         self.lbl_main_label.configure(text=f"You have {time_to_leave} until you have to leave!")
 
-        # Schedule the update every second
         self.lbl_main_label.after(1000, self.update_main_label)
 
     @staticmethod
     def time_to_leave():
-        departure = datetime(2023, 8, 7)
+        departure = datetime(2024, 9, 2)
 
         now = datetime.now()
 
@@ -57,6 +55,6 @@ class Countdown(tk.Tk):
         return s
         
 
-# Instantiate the class
-countdown = Countdown()
-countdown.mainloop()
+if __name__ == '__main__':
+    countdown = Countdown()
+    countdown.mainloop()

@@ -1,8 +1,8 @@
 # Python Automation Projects
 
-Welcome to the Python Automation Projects repository! 🐍✨
+Welcome to my Python Automation Projects repository! 🐍✨
 
-Here, you will find a collection of diverse Python automation projects that aim to simplify your life and boost your productivity. Each project showcases the power of automation using Python, demonstrating how we can delegate repetitive tasks to our trusty machines and save valuable time.
+Here, you will find a collection of diverse Python automation projects that I wrote to simplify my life and boost my productivity. Each project showcases the power of automation using Python, demonstrating how we can delegate repetitive tasks to our trusty machines and save valuable time.
 
 ## Table of Contents
 
@@ -15,7 +15,7 @@ Here, you will find a collection of diverse Python automation projects that aim 
 
 ![Countdown GUI](countdown_gui/screenshots/countdown_gui_screenshot.png)
 
-The **Countdown GUI** is an exciting project that provides a glimpse into the world of Python automation. It is a simple graphical user interface created using Python's tkinter GUI toolkit, where you can track the days until a specific event, such as the start of a new semester or an upcoming vacation. This project is designed to inspire you and serve as an excellent starting point for your own automation endeavours.
+The **Countdown GUI** is a simple graphical user interface created using Python's tkinter GUI toolkit, where you can track the days until a specific event, such as the start of a new semester or an upcoming vacation.
 
 ### Key Features
 
@@ -97,6 +97,66 @@ You can customise the behaviour of the Website Availability Checker script based
 - **Error Handling**: The script handles common exceptions and provides basic error handling. You can enhance the error handling logic to address specific scenarios or error types that you encounter.
 
 Please note that the Website Availability Checker is a basic implementation and may not handle all scenarios or account for complex network configurations. It is recommended to enhance and customise the script based on your specific requirements.
+
+---
+
+# Django Workflow Automation Script
+
+This script automates the setup of a Django project within a virtual environment. It handles the creation of a virtual environment, installation of required packages, initialisation of the Django project, and generation of configuration files such as `.env` and `requirements.txt`.
+
+## Features
+
+- **Virtual Environment Management**: Creates a Python virtual environment if one doesn't already exist.
+- **Package Installation**: Automatically installs necessary Python packages (`Django`, `python-decouple`, `requests`).
+- **Django Project Initialisation**: Sets up a new Django project with a single command.
+- **Environment File Creation**: Generates a basic `.env` file for environment variables.
+- **Requirements File Creation**: Creates a `requirements.txt` file listing all installed packages in the virtual environment.
+- **Coloured Error Messages**: Provides clear, coloured error messages if the script is not run within a virtual environment.
+
+## Prerequisites
+
+- Python 3.x must be installed on your system.
+- The `pip` package manager should be available.
+
+## Usage
+
+1. **Clone the Repository** (if applicable):
+    ```bash
+    cd django-workflow
+    ```
+
+2. **Run the Script**:
+    Replace `'myproject'` with your desired Django project name.
+    ```bash
+    python django_workflow.py
+    ```
+
+3. **Script Execution**:
+    - **Virtual Environment**: The script checks if a virtual environment named `venv` exists in the current directory. If not, it creates one.
+    - **Activation Check**: The script ensures it is being run inside an activated virtual environment.
+    - **Package Installation**: Installs `Django`, `python-decouple`, and `requests`.
+    - **Django Project Setup**: Initializes a new Django project in the current directory.
+    - **File Creation**: Generates a `.env` file and a `requirements.txt` file listing all installed packages.
+
+## Error Handling
+
+- If the script is not run within an activated virtual environment, it will terminate and display an error message in red, indicating that the environment needs to be activated.
+
+## Customization
+
+- **Virtual Environment Name**: You can change the default virtual environment name (`venv`) by modifying the `venv_name` parameter in the `create_venv` method.
+- **Package List**: Modify the `install_packages` method if you need to install additional Python packages.
+
+## Example Output
+
+```bash
+Virtual environment created successfully!
+Virtual environment is activated.
+Installed packages: Django, python-decouple, requests
+Django project `myproject` has been initialized!
+.env file has been created.
+Installed packages have been written to requirements.txt.
+```
 
 ---
 
